@@ -41,3 +41,9 @@ bottom: -6px;
 transition:0.2s
 }
 nav ul li a:hover::after{ width:100%}
+.header-text{margin-top: 15%;
+    font-size:30px;
+}
+.header-text h1{font-size:60px;
+margin-top: 20px;}
+header-text h1 span{color:red;}
