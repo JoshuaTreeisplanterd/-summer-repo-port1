@@ -32,34 +32,80 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="IMG_2819.jpeg" alt="Image Description">
+                    <img src="images/aboutme.jpg" alt="Image Description">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>Hola misuir I am a student at El Cerrito High School and a genius in the Hidden Genius Project. I have met with President Biden and met Kim and Chloe Kardashian. 
                         I have built my success at a very young age with the help of my loyal crew.</p>
                     <div class="tab-titles">
-                    <p class="tab-links active-links">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>content?Creater</span><br>Designer of games</li>
-                            <li><span>editor?</span><br>Designer of edits</li>
-                            <li><span>Youtuber?</span><br>maker of videos</li>
-                            <li><span>Youtuber?</span><br>maker of videos</li>
-                            <li><span>artist?</span><br>maker of art</li>
+                            <li><span>Content Creater</span><br>Designer of Content</li>
+                            <li><span> Video Editor?</span><br>Designer of edits</li>
+                            <li><span> Youtuber?</span><br>maker of videos</li>
+                            <li><span>Artist?</span><br>maker of art</li>
+                        </ul>
+                        </ul>
+                        </ul>
+                    </div><div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2016 - 2024</span><br>Maker of content since 2016</li>
+                            <li><span>2023- 2024</span><br>Designer that has made edits that have gotten thousands of views</li>
+                            <li><span>2016- 2024?</span><br>Maker of videos that do well</li>
+                            <li><span>2015-2024</span><br>Maker of refined art that has been sold</li>
+                        </ul>
+                        </ul>
+                        </ul>
+                    </div><div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2026</span><br>Gradute from El Cerrito Highschool</li>
+                            <li><span>2023?</span><br> Twitch Content Creator learned from streamer</li>
+                            <li><span>2016?</span><br>Maker of Small shorts on TikTok and Youtube</li>
+                            <li><span>2015?</span><br>Horror and Spraypaint design teachings on youtube </li>
                         </ul>
                         </ul>
                         </ul>
                     </div>
-                </div>
             </div>
         </div>
     </div>
+<!--------------------------------services---- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"> MyServices</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web design</h2>
+            </div>
 
-    <!-- Additional Sections (Services, Portfolio, Contact, etc.) -->
+        </div>
+    </div>
+</div>
+  
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks)
+    {tablink.classList.remove("active-link");
+
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+        
+    }event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+</script>
+
 
 </body>
 </html>
