@@ -7,7 +7,7 @@
     
     #header{
         width: 1500px;
-        height: 250vh;
+        height: 150vh;
         background-image: url(images/selfie.jpg);
         background-size: cover;
         background-position: center;
@@ -173,7 +173,8 @@ position: relative;}
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-    font-size: 14px
+    font-size: 14px;
+    transition: height 0.5s;
 
 }
 .layer h3{
@@ -196,4 +197,39 @@ position: relative;}
 .work:hover img{
     transform:scale(1.1);
 
+}
+.work:hover .layer{
+    height:100%
+}
+.btn{
+    display: block;
+    margin:50px auto;
+    width: fit-content;
+    border: 1px solid #ff0066cd;
+    padding: 14px 50px;
+    border-radius:6px;
+    text-decoration: none;
+    color:white;
+    transition: background 0.5s;
+
+
+}
+.btn:hover{
+    background: #b34a76;
+}
+/*---------contact----*/
+.contact-left{flex-basis: 35%
+}
+.contact-right{flex-basis: 60%
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color:#ff0066cd;
+    margin-right: 15px;
+    font-size: 25px;
 }
