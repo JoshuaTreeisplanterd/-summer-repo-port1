@@ -149,7 +149,7 @@
                 <a href="https://images.app.goo.gl/Ju8svph6qcbrqikZ6"  download class="btn btn2">DOWNLOAD CV</a>
             </div>
             <div class="contact-right">
-                <form name='submit-to-google-sheet'>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -190,8 +190,8 @@ function openmenu(){
 
 </script>
 <script>
-    const scriptURL = "<https://script.google.com/a/macros/hgs.hiddengeniusproject.org/s/AKfycbxhTMzvNMAJSTlYRpT8EXuKT-l-m9x-3wl8FhTBBT95Yd443K-7gWJ3L1v29g3z0aU/exec>"
-    const form = document.forms["submit-to-google-sheet"]
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzU6FM3GTAe7M9Jx5z0rjFhsBqBMnCv0Lzl40q83JVPn4jaicQjgkDNtzsEBSdDCaTw/exec'
+    const form = document.forms['submit-to-google-sheet']
   
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -200,5 +200,6 @@ function openmenu(){
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  
 </body>
 </html>
