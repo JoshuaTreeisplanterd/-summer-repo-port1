@@ -12,13 +12,16 @@
         <div class="container">
             <nav>
                 <img src="images/THGP_Logo copy.png" class="logo" alt="thGP Logo">
+                <ul id="sidemenu">
                 
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Video game Designer<br>Content Creator</p>
@@ -146,7 +149,7 @@
                 <a href="https://images.app.goo.gl/Ju8svph6qcbrqikZ6"  download class="btn btn2">DOWNLOAD CV</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name='submit-to-google-sheet'>
                     <input type="text" name="Name" placeholder="Your name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -156,7 +159,7 @@
         </div>
     </div>
     <div class="copyright"></div>
-    <p>Copyright @JOSHUAJORDAN Made with<i class="fa-solid fa-heart"></i> Easy Tutorial</p>
+    <p>Copyright @JOSHUA JORDAN Made with <i class="fa-solid fa-heart"></i> Easy Tutorial</p>
  </div>
 <script>
 
@@ -176,7 +179,26 @@ function opentab(tabname){
 }
 
 </script>
+<script>
+var sidemeu = document.getElementById("sidemenu")
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+function openmenu(){
+    sidemeu.style.right = "-200px";
+}
 
-
+</script>
+<script>
+    const scriptURL = "<https://script.google.com/a/macros/hgs.hiddengeniusproject.org/s/AKfycbxhTMzvNMAJSTlYRpT8EXuKT-l-m9x-3wl8FhTBBT95Yd443K-7gWJ3L1v29g3z0aU/exec>"
+    const form = document.forms["submit-to-google-sheet"]
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
